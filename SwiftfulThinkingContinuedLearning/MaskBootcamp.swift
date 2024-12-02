@@ -28,7 +28,7 @@ struct MaskBootcamp: View {
                     .font(.largeTitle)
                     .foregroundStyle(.gray)
                     .onTapGesture {
-                        withAnimation(.easeInOut) {                        
+                        withAnimation(.easeInOut) {
                             rating = index
                         }
                     }
@@ -40,7 +40,8 @@ struct MaskBootcamp: View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
                 Rectangle()
-                    .foregroundStyle(.yellow)
+//                    .foregroundStyle(.yellow)
+                    .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
                     .frame(width: CGFloat(rating) / 5 * geometry.size.width)
             }
         }
