@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E1449422CFF4CB2005B4EBA /* HashableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1449412CFF4CB2005B4EBA /* HashableBootcamp.swift */; };
+		1E1449442CFF5119005B4EBA /* ArraysBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1449432CFF5119005B4EBA /* ArraysBootcamp.swift */; };
 		1E6254B72CFF0474006D6FC3 /* LocalNotificationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6254B62CFF0474006D6FC3 /* LocalNotificationBootcamp.swift */; };
 		1E7E6E392CFD37EF005AA259 /* SwiftfulThinkingContinuedLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E6E382CFD37EF005AA259 /* SwiftfulThinkingContinuedLearningApp.swift */; };
 		1E7E6E3B2CFD37EF005AA259 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E6E3A2CFD37EF005AA259 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		1E1449412CFF4CB2005B4EBA /* HashableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableBootcamp.swift; sourceTree = "<group>"; };
+		1E1449432CFF5119005B4EBA /* ArraysBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraysBootcamp.swift; sourceTree = "<group>"; };
 		1E6254B62CFF0474006D6FC3 /* LocalNotificationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationBootcamp.swift; sourceTree = "<group>"; };
 		1E7E6E352CFD37EE005AA259 /* SwiftfulThinkingContinuedLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftfulThinkingContinuedLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7E6E382CFD37EF005AA259 /* SwiftfulThinkingContinuedLearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftfulThinkingContinuedLearningApp.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				1EE3C1EB2CFDEEB700AEF768 /* ScrollViewReaderBootcamp.swift */,
 				1E1449412CFF4CB2005B4EBA /* HashableBootcamp.swift */,
 				1EBA58502CFE6CE100766A7A /* SoundsBootcamp.swift */,
+				1E1449432CFF5119005B4EBA /* ArraysBootcamp.swift */,
 				1E6254B62CFF0474006D6FC3 /* LocalNotificationBootcamp.swift */,
 				1EBA58572CFE714000766A7A /* HapticsBootcamp.swift */,
 				1E7E6E382CFD37EF005AA259 /* SwiftfulThinkingContinuedLearningApp.swift */,
@@ -194,6 +197,7 @@
 				1EBA584F2CFE68E200766A7A /* MaskBootcamp.swift in Sources */,
 				1EE3C1E62CFDD23700AEF768 /* DragGestureBootcamp.swift in Sources */,
 				1E7E6E3B2CFD37EF005AA259 /* ContentView.swift in Sources */,
+				1E1449442CFF5119005B4EBA /* ArraysBootcamp.swift in Sources */,
 				1E6254B72CFF0474006D6FC3 /* LocalNotificationBootcamp.swift in Sources */,
 				1EE3C1EC2CFDEEB700AEF768 /* ScrollViewReaderBootcamp.swift in Sources */,
 				1E8B3E8B2CFE3AFE00810FC9 /* MultipleSheetsBootcamp.swift in Sources */,
