@@ -11,61 +11,60 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default
-    ) private var items: FetchedResults<Item>
+    @FetchRequest(sortDescriptors: []) var fruits: FetchedResults<FruitEntity>
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(items) { item in
-                    Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                ForEach(fruits) { fruit in
+                    Text(fruit.name ?? "")
                 }
                 .onDelete(perform: deleteItems)
             }
             .listStyle(.plain)
             .navigationTitle("Core Data Bootcamp")
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    EditButton()
-                }
                 ToolbarItem(placement: .topBarTrailing) {
-                    addItem()
+                    Button(action: addFruit) {
+                        Label("Add Item", systemImage: "plus")
+                    }
+                    
                 }
-                
             }
         }
     }
     
-    private func addItem() {
+    private func addFruit() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-            
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            let newFruit = FruitEntity(context: viewContext)
+            newFruit.name = "Orange"
+            saveItems()
         }
     }
     
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            guard let index = offsets.first else { return }
+            let fruitEntity = fruits[index]
+            viewContext.delete(fruitEntity)
             
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            // more compact version of the above
+            offsets.map { fruits[$0] }.forEach(viewContext.delete)
+            
+            saveItems()
+        }
+    }
+    
+    private func saveItems() {
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
