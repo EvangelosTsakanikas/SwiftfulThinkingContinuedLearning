@@ -17,11 +17,11 @@ struct VisualEffectBootcamp: View {
                 ForEach(0..<100) { index in
                     Rectangle()
                         .frame(width: 300, height: 200)
-                        .frame(maxWidth: .infinity)
+                        .frame(maxWidth: 500)
                         .background(.orange)
                         .visualEffect { content, geometry in
                             content
-                                .offset(x: geometry.frame(in: .global).minX * 0.5)
+                                .offset(x: geometry.frame(in: .global).minY * 0.5)
                         }
                 }
             }
